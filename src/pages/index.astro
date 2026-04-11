@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sanctuary" description="A digital sanctuary for healing and finding peace.">
+  <main class="landing">
+    <!-- Breathing background orb -->
+    <div class="orb" aria-hidden="true"></div>
+
+    <header class="landing-header animate-fade-up">
+      <span class="label">a quiet place</span>
+      <h1 class="heading-lg">Sanctuary</h1>
+      <p class="landing-subtitle">
+        Practice tools for healing, stillness, and finding peace.
+      </p>
+    </header>
+
+    <nav class="tree animate-fade-up" style="animation-delay: 200ms;">
+      <span class="label" style="margin-bottom: var(--space-lg);">The Tree of Knowledge</span>
+
+      <div class="branches">
+        <a href="/practices/anger/" class="branch">
+          <span class="branch-title">Anger</span>
+          <span class="branch-subtitle">Cooling the flames</span>
+          <span class="branch-source">Thich Nhat Hanh</span>
+        </a>
+
+        <div class="branch branch--coming">
+          <span class="branch-title">Fear</span>
+          <span class="branch-subtitle">Essential wisdom for getting through the storm</span>
+          <span class="branch-tag">Coming soon</span>
+        </div>
+
+        <div class="branch branch--coming">
+          <span class="branch-title">Silence</span>
+          <span class="branch-subtitle">The power of quiet in a world full of noise</span>
+          <span class="branch-tag">Coming soon</span>
+        </div>
+
+        <div class="branch branch--coming">
+          <span class="branch-title">Love</span>
+          <span class="branch-subtitle">How to love</span>
+          <span class="branch-tag">Coming soon</span>
+        </div>
+      </div>
+    </nav>
+
+    <footer class="landing-footer animate-fade-in" style="animation-delay: 600ms;">
+      <p>
+        Open source. Free forever. Built for healing.<br />
+        <a href="https://github.com/OWNER/sanctuary" target="_blank" rel="noopener">
+          Contribute on GitHub
+        </a>
+      </p>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  .landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-3xl) var(--space-md) var(--space-xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .orb {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color-sand-faint) 0%, transparent 70%);
+    animation: breathe 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .landing-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    position: relative;
+    z-index: 1;
+  }
+
+  .landing-header .label {
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  .landing-subtitle {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: var(--space-md);
+    max-width: 380px;
+  }
+
+  .tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .branches {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+  }
+
+  .branch {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg) var(--space-lg);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--duration-fast) var(--ease-gentle);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .branch:not(.branch--coming):hover {
+    border-color: var(--color-sand);
+    background: rgba(196, 164, 116, 0.04);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .branch--coming {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .branch-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .branch-subtitle {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .branch-source {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
+  }
+
+  .branch-tag {
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
+  }
+
+  .landing-footer {
+    margin-top: auto;
+    padding-top: var(--space-3xl);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .landing-footer a {
+    color: var(--color-sand);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-faint);
+    transition: border-color var(--duration-fast);
+  }
+
+  .landing-footer a:hover {
+    border-color: var(--color-sand);
+  }
+</style>
