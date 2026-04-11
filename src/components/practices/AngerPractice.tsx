@@ -231,6 +231,34 @@ export default function AngerPractice() {
         .fade-transition { transition: opacity 0.25s ease; }
         .fade-out { opacity: 0; }
         .fade-in { opacity: 1; }
+
+        .card-back p {
+          font-family: var(--font-display);
+          font-size: var(--card-text-mobile);
+          font-weight: 400;
+          color: var(--text-inverse);
+          text-align: center;
+          line-height: 1.65;
+        }
+
+        .practice-box p {
+          font-family: var(--font-display);
+          font-size: 16px;
+          color: var(--text-primary);
+          line-height: 1.65;
+          font-style: italic;
+        }
+
+        .journal-view > p {
+          font-family: var(--font-display);
+          font-size: 20px;
+          font-weight: 400;
+          color: var(--text-primary);
+          text-align: center;
+          line-height: 1.55;
+          font-style: italic;
+          max-width: 380px;
+        }
       `}</style>
 
       <div className="anger-orb" aria-hidden="true" />
@@ -271,12 +299,7 @@ export default function AngerPractice() {
                 <span className="label" style={{ marginTop: 20 }}>tap to reveal</span>
               </div>
               <div className="card-face card-back">
-                <p style={{
-                  fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 400,
-                  color: 'var(--text-inverse)', textAlign: 'center', lineHeight: 1.65,
-                }}>
-                  {card.back}
-                </p>
+                <p>{card.back}</p>
               </div>
             </div>
           </div>
@@ -295,25 +318,14 @@ export default function AngerPractice() {
           {showPractice && (
             <div className="practice-box">
               <span className="label" style={{ display: 'block', marginBottom: 10 }}>Practice</span>
-              <p style={{
-                fontFamily: 'var(--font-display)', fontSize: 16,
-                color: 'var(--text-primary)', lineHeight: 1.65, fontStyle: 'italic',
-              }}>
-                {card.practice}
-              </p>
+              <p>{card.practice}</p>
             </div>
           )}
         </div>
       ) : (
         <div className="anger-content" style={{ maxWidth: 460, animation: 'fadeUp 0.5s ease-out' }}>
           <span className="label">Today's Reflection</span>
-          <p style={{
-            fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 400,
-            color: 'var(--text-primary)', textAlign: 'center', lineHeight: 1.55,
-            fontStyle: 'italic', maxWidth: 380,
-          }}>
-            {JOURNAL_PROMPTS[journalIndex]}
-          </p>
+          <p>{JOURNAL_PROMPTS[journalIndex]}</p>
           <textarea
             className="journal-area"
             placeholder="Begin writing here..."
