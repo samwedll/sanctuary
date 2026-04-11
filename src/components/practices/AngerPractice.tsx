@@ -304,7 +304,7 @@ export default function AngerPractice() {
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+          <div className="card-nav-row" style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
             <button className="nav-btn" onClick={prevCard} aria-label="Previous card">←</button>
             <button className="action-btn" onClick={() => {
               setShowPractice(!showPractice);
@@ -323,7 +323,7 @@ export default function AngerPractice() {
           )}
         </div>
       ) : (
-        <div className="anger-content" style={{ maxWidth: 460, animation: 'fadeUp 0.5s ease-out' }}>
+        <div className="anger-content journal-view" style={{ animation: 'fadeUp 0.5s ease-out' }}>
           <span className="label">Today's Reflection</span>
           <p>{JOURNAL_PROMPTS[journalIndex]}</p>
           <textarea
