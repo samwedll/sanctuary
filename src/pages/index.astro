@@ -25,19 +25,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <span class="branch-source">Thich Nhat Hanh</span>
         </a>
 
-        <div class="branch branch--coming">
+        <div class="branch branch--coming" aria-disabled="true">
           <span class="branch-title">Fear</span>
           <span class="branch-subtitle">Essential wisdom for getting through the storm</span>
           <span class="branch-tag">Coming soon</span>
         </div>
 
-        <div class="branch branch--coming">
+        <div class="branch branch--coming" aria-disabled="true">
           <span class="branch-title">Silence</span>
           <span class="branch-subtitle">The power of quiet in a world full of noise</span>
           <span class="branch-tag">Coming soon</span>
         </div>
 
-        <div class="branch branch--coming">
+        <div class="branch branch--coming" aria-disabled="true">
           <span class="branch-title">Love</span>
           <span class="branch-subtitle">How to love</span>
           <span class="branch-tag">Coming soon</span>
@@ -140,8 +140,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .branch--coming {
-    opacity: 0.4;
+    border: 1px dashed var(--border-subtle);
+    background: transparent;
     cursor: default;
+  }
+
+  .branch--coming .branch-title {
+    color: var(--text-secondary);
+  }
+
+  .branch--coming .branch-subtitle {
+    color: var(--text-muted);
   }
 
   .branch-title {
@@ -170,12 +179,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .branch-tag {
+    align-self: flex-start;
+    margin-top: var(--space-md);
+    padding: 4px 10px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
     font-family: var(--font-body);
     font-size: 10px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-top: var(--space-sm);
   }
 
   .landing-footer {
