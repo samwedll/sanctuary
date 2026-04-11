@@ -261,6 +261,27 @@ export default function AngerPractice() {
           font-style: italic;
           max-width: 380px;
         }
+
+        @media (min-width: 900px) {
+          .anger-root {
+            padding: 40px 16px;
+            justify-content: center;
+            min-height: 100vh;
+          }
+
+          .anger-header { margin-bottom: 20px; }
+
+          .anger-content { max-width: var(--stage-max-width-desktop); }
+
+          .anger-orb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 620px;
+            height: 620px;
+          }
+        }
       `}</style>
 
       <div className="anger-orb" aria-hidden="true" />
