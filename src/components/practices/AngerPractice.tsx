@@ -140,8 +140,7 @@ export default function AngerPractice() {
         .anger-orb {
           position: fixed;
           top: 20%;
-          left: 50%;
-          transform: translateX(-50%);
+          left: calc(50% - 200px);
           width: 400px;
           height: 400px;
           border-radius: 50%;
@@ -281,9 +280,8 @@ export default function AngerPractice() {
 
           .anger-orb {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: calc(50% - 310px);
+            left: calc(50% - 310px);
             width: 620px;
             height: 620px;
           }
