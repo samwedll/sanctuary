@@ -281,6 +281,27 @@ export default function AngerPractice() {
             width: 620px;
             height: 620px;
           }
+
+          .card-container, .card-inner { min-height: 420px; }
+
+          .card-face {
+            padding: 56px 48px;
+            min-height: 420px;
+          }
+
+          .card-face .heading-md {
+            font-size: var(--heading-card-desktop);
+          }
+
+          .card-back p {
+            font-size: var(--card-text-desktop);
+            line-height: 1.6;
+            max-width: 52ch;
+          }
+
+          .practice-box p {
+            font-size: 18px;
+          }
         }
       `}</style>
 
