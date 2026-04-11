@@ -302,6 +302,30 @@ export default function AngerPractice() {
           .practice-box p {
             font-size: 18px;
           }
+
+          .nav-btn {
+            width: 52px;
+            height: 52px;
+            font-size: 22px;
+          }
+
+          .action-btn {
+            padding: 10px 22px;
+            font-size: 13px;
+          }
+
+          .card-nav-row { gap: 32px; }
+
+          .journal-view > p {
+            font-size: clamp(1.4rem, 2vw, 1.75rem);
+            max-width: 52ch;
+          }
+
+          .journal-area {
+            min-height: 240px;
+            padding: 28px;
+            font-size: var(--card-text-desktop);
+          }
         }
       `}</style>
 
