@@ -101,9 +101,11 @@ export default function AngerPractice() {
   const [journalIndex, setJournalIndex] = useState(0);
   const [journalText, setJournalText] = useState('');
   const [fadeIn, setFadeIn] = useState(true);
+  const [canHover, setCanHover] = useState(false);
 
   useEffect(() => {
     setJournalIndex(Math.floor(Math.random() * JOURNAL_PROMPTS.length));
+    setCanHover(window.matchMedia('(hover: hover) and (pointer: fine)').matches);
   }, []);
 
   const transition = (cb: () => void) => {
@@ -296,7 +298,7 @@ export default function AngerPractice() {
                 <div style={{ width: 40, height: 1, background: 'var(--border-subtle)', marginBottom: 28 }} />
                 <span className="heading-md">{card.front}</span>
                 <div style={{ width: 40, height: 1, background: 'var(--border-subtle)', marginTop: 28 }} />
-                <span className="label" style={{ marginTop: 20 }}>tap to reveal</span>
+                <span className="label" style={{ marginTop: 20 }}>{canHover ? 'click to reveal' : 'tap to reveal'}</span>
               </div>
               <div className="card-face card-back">
                 <p>{card.back}</p>
