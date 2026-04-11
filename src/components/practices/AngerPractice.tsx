@@ -262,6 +262,12 @@ export default function AngerPractice() {
           max-width: 380px;
         }
 
+        .card-nav-row {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+        }
+
         @media (min-width: 900px) {
           .anger-root {
             padding: 40px 16px;
@@ -372,7 +378,7 @@ export default function AngerPractice() {
             </div>
           </div>
 
-          <div className="card-nav-row" style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+          <div className="card-nav-row">
             <button className="nav-btn" onClick={prevCard} aria-label="Previous card">←</button>
             <button className="action-btn" onClick={() => {
               setShowPractice(!showPractice);
