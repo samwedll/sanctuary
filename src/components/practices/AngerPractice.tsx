@@ -155,7 +155,7 @@ export default function AngerPractice() {
         .anger-tabs { display: flex; gap: 8px; margin-bottom: 28px; position: relative; z-index: 1; }
         .anger-tab {
           background: none; border: none; padding: 10px 20px; cursor: pointer;
-          font-family: var(--font-body); font-size: 13px; letter-spacing: 1.5px;
+          font-family: var(--font-body); font-size: 15px; letter-spacing: 1.5px;
           text-transform: uppercase; transition: all 0.3s; position: relative;
           color: var(--text-muted);
         }
@@ -207,7 +207,7 @@ export default function AngerPractice() {
         .action-btn {
           background: none; border: 1px solid var(--border-subtle);
           color: var(--color-sand); padding: 8px 18px; border-radius: var(--radius-full);
-          cursor: pointer; font-family: var(--font-body); font-size: 12px;
+          cursor: pointer; font-family: var(--font-body); font-size: 14px;
           letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s;
         }
         .action-btn:hover { background: rgba(196,164,116,0.1); }
@@ -223,7 +223,7 @@ export default function AngerPractice() {
           background: rgba(44,36,23,0.4); border: 1px solid var(--border-faint);
           border-radius: var(--radius-md); padding: 20px;
           color: var(--text-primary); font-family: var(--font-display);
-          font-size: 17px; line-height: 1.7; resize: vertical; outline: none;
+          font-size: 20px; line-height: 1.7; resize: vertical; outline: none;
           transition: border-color 0.3s;
         }
         .journal-area:focus { border-color: rgba(196,164,116,0.5); }
@@ -244,7 +244,7 @@ export default function AngerPractice() {
 
         .practice-box p {
           font-family: var(--font-display);
-          font-size: 16px;
+          font-size: 18px;
           color: var(--text-primary);
           line-height: 1.65;
           font-style: italic;
@@ -304,7 +304,7 @@ export default function AngerPractice() {
           }
 
           .practice-box p {
-            font-size: 18px;
+            font-size: 20px;
           }
 
           .nav-btn {
@@ -315,7 +315,7 @@ export default function AngerPractice() {
 
           .action-btn {
             padding: 10px 22px;
-            font-size: 13px;
+            font-size: 15px;
           }
 
           .card-nav-row { gap: 32px; }
