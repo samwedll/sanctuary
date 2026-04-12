@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FearPractice from '../../../components/practices/FearPractice';
+---
+
+<BaseLayout
+  title="Fear — Sanctuary"
+  description="Practice tools for understanding and transforming fear through mindfulness. Based on the teachings of Thich Nhat Hanh."
+>
+  <main class="practice-page">
+    <nav class="practice-nav">
+      <a href="/" class="back-link">
+        <span aria-hidden="true">←</span> Sanctuary
+      </a>
+    </nav>
+    <FearPractice client:load />
+  </main>
+</BaseLayout>
+
+<style>
+  .practice-page {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .practice-nav {
+    position: absolute;
+    top: var(--space-lg);
+    left: var(--space-lg);
+    z-index: 10;
+  }
+
+  .back-link {
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--duration-fast);
+  }
+
+  .back-link:hover {
+    color: var(--text-secondary);
+  }
+</style>
