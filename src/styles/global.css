@@ -53,8 +53,8 @@
 
   /* Responsive stage */
   --stage-max-width-desktop: 680px;
-  --card-text-mobile: 17px;
-  --card-text-desktop: 20px;
+  --card-text-mobile: 20px;
+  --card-text-desktop: 23px;
   --heading-card-desktop: clamp(2rem, 2.6vw, 2.6rem);
 
   /* Radii */
@@ -112,7 +112,7 @@ body {
 /* Utility */
 .label {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -137,7 +137,7 @@ body {
 
 .body-text {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.7;
   color: var(--text-primary);
 }
