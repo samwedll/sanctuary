@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Teaching cards for Thich Nhat Hanh's teachings on love
+ * Organized around the Four Aspects of True Love (Four Brahmaviharas)
+ *
+ * Each card has:
+ * - front: the concept name
+ * - back: the teaching explained
+ * - practice: a concrete exercise to try right now
+ */
 type Card = { front: string; back: string; practice: string };
 
 const CHAPTERS: { name: string; pali: string; cards: Card[] }[] = [
@@ -88,8 +97,6 @@ const CHAPTERS: { name: string; pali: string; cards: Card[] }[] = [
     ],
   },
 ];
-
-const CARDS: Card[] = CHAPTERS.flatMap((ch) => ch.cards);
 
 const JOURNAL_PROMPTS = [
   'What does love look like in my life today — and where am I withholding it?',
