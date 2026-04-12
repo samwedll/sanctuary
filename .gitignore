@@ -21,6 +21,9 @@ Thumbs.db
 # astro
 .astro/
 
+# brainstorming mockups
+.superpowers/
+
 # wrangler files
 .wrangler
 .dev.vars*
