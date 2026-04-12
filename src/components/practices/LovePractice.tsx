@@ -190,7 +190,7 @@ export default function LovePractice() {
 
         .love-header { text-align: center; margin-bottom: 12px; position: relative; z-index: 1; }
 
-        .love-tabs { display: flex; gap: 8px; margin-bottom: 16px; position: relative; z-index: 1; }
+        .love-tabs { display: flex; gap: 8px; margin-bottom: 28px; position: relative; z-index: 1; }
         .love-tab {
           background: none; border: none; padding: 10px 20px; cursor: pointer;
           font-family: var(--font-body); font-size: 13px; letter-spacing: 1.5px;
@@ -204,7 +204,7 @@ export default function LovePractice() {
         }
 
         .love-chapters {
-          display: flex; gap: 4px; margin-bottom: 28px; position: relative; z-index: 1;
+          display: flex; gap: 4px; margin-bottom: 16px; position: relative; z-index: 1;
           flex-wrap: wrap; justify-content: center;
         }
         .love-chapter-btn {
