@@ -339,7 +339,7 @@ export default function AngerPractice() {
         <span className="label">Thich Nhat Hanh</span>
         <h1 className="heading-lg" style={{ marginTop: 8 }}>Anger</h1>
         <p style={{
-          fontFamily: 'var(--font-display)', fontSize: 15, fontWeight: 300,
+          fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 300,
           color: 'var(--text-secondary)', fontStyle: 'italic', marginTop: 4,
         }}>
           Wisdom for Cooling the Flames
@@ -417,7 +417,7 @@ export default function AngerPractice() {
 
       <footer style={{
         marginTop: 'auto', paddingTop: 60, textAlign: 'center',
-        fontSize: 11, color: 'var(--text-muted)', position: 'relative', zIndex: 1,
+        fontSize: 14, color: 'var(--text-muted)', position: 'relative', zIndex: 1,
       }}>
         Based on teachings from Thich Nhat Hanh
       </footer>

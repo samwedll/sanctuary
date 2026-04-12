@@ -216,7 +216,7 @@ export default function LovePractice() {
         }
         .love-chapter-btn {
           background: none; border: none; padding: 6px 12px; cursor: pointer;
-          font-family: var(--font-display); font-size: 15px; font-weight: 400;
+          font-family: var(--font-display); font-size: 18px; font-weight: 400;
           transition: all 0.3s; position: relative;
           color: var(--text-muted);
         }
@@ -400,7 +400,7 @@ export default function LovePractice() {
         <span className="label">Thich Nhat Hanh</span>
         <h1 className="heading-lg" style={{ marginTop: 8 }}>Love</h1>
         <p style={{
-          fontFamily: 'var(--font-display)', fontSize: 15, fontWeight: 300,
+          fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 300,
           color: 'var(--text-secondary)', fontStyle: 'italic', marginTop: 4,
         }}>
           How to Love
@@ -491,7 +491,7 @@ export default function LovePractice() {
 
       <footer style={{
         marginTop: 'auto', paddingTop: 60, textAlign: 'center',
-        fontSize: 11, color: 'var(--text-muted)', position: 'relative', zIndex: 1,
+        fontSize: 14, color: 'var(--text-muted)', position: 'relative', zIndex: 1,
       }}>
         Based on teachings from Thich Nhat Hanh
       </footer>
