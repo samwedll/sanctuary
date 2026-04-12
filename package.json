@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
+    "dev:clean": "lsof -ti :4321 -ti :4322 -ti :4323 2>/dev/null | xargs kill -9 2>/dev/null; astro dev",
     "build": "astro build",
     "preview": "npm run build && wrangler dev",
     "astro": "astro",

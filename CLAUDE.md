@@ -5,14 +5,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev       # Astro dev server (local)
-npm run build     # Static build to dist/ (includes Cloudflare _worker.js)
-npm run preview   # Build, then serve via wrangler dev
-npm run deploy    # Build, then wrangler deploy (Cloudflare)
+npm run dev         # Astro dev server (local)
+npm run dev:clean   # Kill zombie watchers on :4321-:4323, then start fresh
+npm run build       # Static build to dist/ (includes Cloudflare _worker.js)
+npm run preview     # Build, then serve via wrangler dev
+npm run deploy      # Build, then wrangler deploy (Cloudflare)
 npm run cf-typegen  # Regenerate Cloudflare env types from wrangler.jsonc
 ```
 
 There is no test runner, linter, or formatter configured. Do not invent one.
+
+**Dev servers.** Never start dev servers (`npm run dev`, `npm run preview`, etc.) inside Claude sessions. They spawn zombie file watchers that pile up across port numbers. Always ask the user to start servers themselves. Use `npm run build` to verify compilation.
 
 ## Architecture
 
